@@ -1,49 +1,63 @@
-import React from 'react'
-import './Header.css'
-import logo from '../../assets/logo-colored.svg'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './Header.css';
+import logo from '../../assets/logo-colored.svg';
+
 function Header() {
   return (
-    <div class="containerHeader">
-    <nav>
-      <div class="navbar">
-        <div class="logo">
-          <img src={logo} alt="" />
-        </div>
-        <ul>
-          <li><a href="#">
-            <i class="fas fa-user"></i>
-            <span class="nav-item">My Profile</span>
-          </a>
-          </li>
-          <li><a href="#">
-          <i class="fa-solid fa-money-check-dollar"></i>
-            <span class="nav-item">My Pay</span>
-          </a>
-          </li>
-          
-          <li><a href="#">
-            <i class="fab fa-dochub"></i>
-            <span class="nav-item">My Documnents</span>
-          </a>
-          </li>
-          <li><a href="#">
-            <i class="fas fa-cog"></i>
-            <span class="nav-item">Setting</span>
-          </a>
-          </li>
-          <li><a href="#">
-            <i class="fas fa-question-circle"></i>
-            <span class="nav-item">Help</span>
-          </a>
-          </li>
-          
-        </ul>
-      </div>
-    </nav>
+    <div className="containerHeader">
+      <nav>
+        <div className="navbar">
+          <div className="logo">
+            <img src={logo} alt="" />
+          </div>
+          <ul>
+            <li>
+              <NavLink exact to="/profile" activeClassName="active">
+                <i className="fas fa-user"></i>
+                <span className="nav-item">My Profile</span>
+              </NavLink>
+            </li>
+            
+            <li>
+              <NavLink to="/myDocuments" activeClassName="active">
+                <i className="fab fa-dochub"></i>
+                <span className="nav-item">My Documents</span>
+              </NavLink>
+            </li>
 
-   
-  </div>
-  )
+            <li>
+              <NavLink to="/myPay" activeClassName="active">
+                <i className="fa-solid fa-money-check-dollar"></i>
+                <span className="nav-item">My Pay</span>
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/reimbursement" activeClassName="active">
+                <i className="fa-solid fa-money-check-dollar"></i>
+                <span className="nav-item">Reimbursement</span>
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/taxcalculator" activeClassName="active">
+                <i className="fas fa-cog"></i>
+                <span className="nav-item">Tax Calculator</span>
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/investment" activeClassName="active">
+                <i className="fas fa-question-circle"></i>
+                <span className="nav-item">Investment Details</span>
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  );
 }
 
-export default Header
+export default Header;

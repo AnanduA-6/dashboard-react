@@ -25,7 +25,7 @@ function Home() {
           <h1>Home</h1>
           <div className='headerRight'>
             <img src={user} alt="" />
-            <span>Meera Agarwal</span>
+            <span>Ann Rachel</span>
             <i class="fa-solid fa-power-off logoutBtn" title='Logout' onClick={()=>logout()}></i>
           </div>
         </div>
@@ -116,7 +116,7 @@ function Home() {
         <div className="leaveSection">
           
           <div className='leaveBox sick'>
-            Sick Leave
+            Earned Leave
             <div className='circleSec'>
                 <div class="radial-01 radial-three-quarters">
                   <span class="radial-01-number">
