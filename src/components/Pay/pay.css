@@ -1,0 +1,138 @@
+.payContainer {
+    width: 100%;
+    display: flex;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.payMain {
+    width: 100%;
+    margin-left: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerPay {
+    width: 80%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19), 0 1px 3px rgba(0, 0, 0, 0.23);
+    border-radius: 2px;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    padding-top: 0;
+}
+
+.payHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: 0px 10px 9px -16px;
+    background-color: white;
+}
+
+.payHeader span {
+    padding: 1rem 0;
+    cursor: pointer;
+    width: calc(100%/3);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 5px;
+}
+
+.payHeader span::after {
+    content: "";
+    width: 0%;
+    height: 0.15rem;
+    background-color: #2044a6;
+    display: block;
+    margin-top: 0.4rem;
+    transition: 0.4s;
+}
+
+.addUnderLine::after {
+    width: 75% !important;
+    ;
+}
+
+.payBodySS {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    margin-top: 1rem;
+}
+
+.payBodySS div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    padding: 3px 5%;
+    background-color: rgba(181, 199, 251, 0.2);
+    font-size: 0.8rem;
+}
+
+.payBodyPS {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    padding: 3rem 0 5rem 0;
+}
+.payBodyPS h2{
+    font-weight: normal;
+}
+
+.selectorSS {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    column-gap: 5rem;
+}
+
+.selectorSS div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.selectorSS div label {
+    font-size: 0.8rem;
+}
+
+.viewSec{
+    display: flex;
+    column-gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    width: 87%;
+    font-size: 0.8rem;
+    margin-top: 3rem;
+}
+.selectorSS div select {
+    width: 15rem;
+    outline: none;
+    background: #496dd1;
+    background-image: none;
+    color: white;
+    cursor: pointer;
+    height: 2rem;
+    border-radius: 2px;
+}
+.viewSec span{
+    cursor: pointer;
+}
+.viewSec span i{
+    margin-right: 5px;
+}

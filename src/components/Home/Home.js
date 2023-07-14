@@ -26,7 +26,7 @@ function Home() {
           <div className='headerRight'>
             <img src={user} alt="" />
             <span>Meera Agarwal</span>
-            <i class="fa-solid fa-power-off logoutBtn" onClick={()=>logout()}></i>
+            <i class="fa-solid fa-power-off logoutBtn" title='Logout' onClick={()=>logout()}></i>
           </div>
         </div>
         <div className="homeBottom">
