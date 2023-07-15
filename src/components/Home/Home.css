@@ -671,3 +671,117 @@ header .current-date {
     }
 
 }
+.overLay{
+    position: absolute;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 100;
+    height: 200vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+
+.leaveApplicationContainer{
+    background-color: white;
+    border-radius: 10px;
+    width: 60%;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+    position: relative;
+}
+.leaveApplicationContainer form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.leaveApplicationContainer label {
+    font-weight: normal;
+  }
+
+  .leaveApplicationContainer input[type="text"],
+  .leaveApplicationContainer input[type="email"],
+  .leaveApplicationContainer select,
+  .leaveApplicationContainer textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .leaveApplicationContainer input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .leaveApplicationContainer textarea {
+    height: 50px;
+  }
+
+  .leaveApplicationContainer input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .leaveApplicationContainer input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .leaveApplicationContainer .form-group {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+  .leaveApplicationContainer .form-group input{
+    width: 80%;
+    outline: none;
+  }
+  .leaveApplicationContainer .form-group:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .leaveApplicationContainer .form-group label {
+    float: left;
+
+  }
+
+  .leaveApplicationContainer .form-group input,
+  .leaveApplicationContainer .form-group select,
+  .leaveApplicationContainer .form-group textarea {
+    float: left;
+    width: calc(100% - 160px);
+  }
+.closeLeave{
+    position: absolute;
+    top: 10px;
+    width: 2rem;
+    right: 10px;
+    cursor: pointer;
+}
+.closeLeave::before{
+    font-size: 1.5rem;
+}

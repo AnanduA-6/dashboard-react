@@ -1,24 +1,94 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header'
 import './Home.css'
 import user from '../../assets/user-image.jpg'
 import CalendarSec from './CalendarSec'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Home() {
-  const navigate=useNavigate()
-  let token=sessionStorage.getItem('login')
-  useEffect(()=>{
-    if(token==null){
+  const navigate = useNavigate()
+  let token = sessionStorage.getItem('login')
+  const [leaveSection, setLeaveSection] = useState(false)
+  useEffect(() => {
+    if (token == null) {
       navigate('/')
     }
-  },[])
-  function logout(){
+  }, [])
+  function logout() {
     sessionStorage.removeItem('login')
     navigate('/')
   }
+  function submitForm(e){
+    setLeaveSection(false)
+    alert('Leave Request successfully send.')
+  }
   return (
     <div className='homeMain'>
+      {leaveSection ? <div className='overLay'>
+        <div style={{width:'100%',display:'flex',alignItems:'center',justifyContent:'center'}}>
+        <div class="leaveApplicationContainer">
+        <i class="fa-solid fa-circle-xmark closeLeave" onClick={()=>setLeaveSection(false)}></i>
+          <h1>Leave Request Form</h1>
+
+          <form id="leaveForm">
+            
+
+            
+
+            <div class="form-group">
+              <label for="leaveType">Type of Leave:</label>
+              <select id="leaveType" name="leaveType" required>
+                <option value="">Select Leave Type</option>
+                <option value="sick">Sick Leave</option>
+                <option value="vacation">Vacation Leave</option>
+                <option value="personal">Personal Leave</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="reason">Reason:</label>
+              <textarea id="reason" name="reason" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="startDate">Start Date and Duration</label>
+              <input type="date" id="startDate" name="startDate" required />
+            </div>
+
+            <div class="form-group">
+              <label for="endDate">End Date and Duration</label>
+              <input type="date" id="endDate" name="endDate" required />
+            </div>
+
+            <div class="form-group">
+              
+              <select id="startDuration" name="startDuration" required>
+                <option value="">Select Duration</option>
+                <option value="fullDay">Full Day</option>
+                <option value="halfDay">Half Day</option>
+              </select>
+            </div>
+
+            
+
+            <div class="form-group">
+              <select id="endDuration" name="endDuration" required>
+                <option value="">Select Duration</option>
+                <option value="fullDay">Full Day</option>
+                <option value="halfDay">Half Day</option>
+              </select>
+            </div>
+
+            
+
+            <div class="form-group" style={{display:'flex'}}>
+              <input type="submit" onClick={(e)=>submitForm(e)} value="Submit" />
+            </div>
+          </form>
+        </div>
+        </div>
+        
+      </div> : ''}
+
       <Header></Header>
       <div className='homeRight'>
         <div className='headerHome'>
@@ -26,7 +96,7 @@ function Home() {
           <div className='headerRight'>
             <img src={user} alt="" />
             <span>Ann Rachel</span>
-            <i class="fa-solid fa-power-off logoutBtn" title='Logout' onClick={()=>logout()}></i>
+            <i class="fa-solid fa-power-off logoutBtn" title='Logout' onClick={() => logout()}></i>
           </div>
         </div>
         <div className="homeBottom">
@@ -59,28 +129,28 @@ function Home() {
               <div className="rightSec">
                 <div className='infoIcon'><i class="fa-solid fa-info"></i></div>
                 <div className='pointsSec'><span>1200</span><span>Points</span></div>
-                
+
               </div>
             </div>
-            
+
 
             <div className='superiorTabMain'>
-            <div className="superiorTab">
-              <p>Project Managers</p>
-              <span>Project Name</span>
-              <span>JUL-DEC 2023</span>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <div className='managerImg'>
-                  <img src={user} alt="" />
-                  <img src={user} alt="" />
+              <div className="superiorTab">
+                <p>Project Managers</p>
+                <span>Project Name</span>
+                <span>JUL-DEC 2023</span>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div className='managerImg'>
+                    <img src={user} alt="" />
+                    <img src={user} alt="" />
+                  </div>
+                  <i class="fa-solid fa-chevron-right"></i>
                 </div>
-                <i class="fa-solid fa-chevron-right"></i>
+
+
               </div>
-
-
             </div>
-            </div>
-            
+
 
             <div className='taxTab'>
               <div><span>Tax Summary</span> <span className='faq'>Faq<i class="fa-solid fa-question"></i></span></div>
@@ -97,7 +167,7 @@ function Home() {
               </div>
             </div>
 
-            
+
           </div>
 
           <div className="homeBottomRight">
@@ -114,57 +184,57 @@ function Home() {
 
         </div>
         <div className="leaveSection">
-          
+
           <div className='leaveBox sick'>
             Earned Leave
             <div className='circleSec'>
-                <div class="radial-01 radial-three-quarters">
-                  <span class="radial-01-number">
-                    03<span style={{fontSize:'10px'}}>Days</span>
-                  </span>
-                  <span class="radial-01-border-r"></span>
-                  <span class="radial-01-border-l"></span>
-                </div>
+              <div class="radial-01 radial-three-quarters">
+                <span class="radial-01-number">
+                  03<span style={{ fontSize: '10px' }}>Days</span>
+                </span>
+                <span class="radial-01-border-r"></span>
+                <span class="radial-01-border-l"></span>
               </div>
+            </div>
           </div>
           <div className='leaveBox pri'>
             Privileged Leave
             <div className='circleSec'>
-                <div class="radial-01 radial-three-quarters">
-                  <span class="radial-01-number">
-                    02<span style={{fontSize:'10px'}}>Days</span>
-                  </span>
-                  <span class="radial-01-border-r"></span>
-                  <span class="radial-01-border-l"></span>
-                </div>
+              <div class="radial-01 radial-three-quarters">
+                <span class="radial-01-number">
+                  02<span style={{ fontSize: '10px' }}>Days</span>
+                </span>
+                <span class="radial-01-border-r"></span>
+                <span class="radial-01-border-l"></span>
               </div>
+            </div>
           </div>
           <div className='leaveBox casual'>
             Casual Leave
             <div className='circleSec'>
-                <div class="radial-01 radial-three-quarters">
-                  <span class="radial-01-number">
-                    05<span style={{fontSize:'10px'}}>Days</span>
-                  </span>
-                  <span class="radial-01-border-r"></span>
-                  <span class="radial-01-border-l"></span>
-                </div>
+              <div class="radial-01 radial-three-quarters">
+                <span class="radial-01-number">
+                  05<span style={{ fontSize: '10px' }}>Days</span>
+                </span>
+                <span class="radial-01-border-r"></span>
+                <span class="radial-01-border-l"></span>
               </div>
+            </div>
           </div>
           <div className='leaveBox floater'>
             Floater Holiday
             <div className='circleSec'>
-                <div class="radial-01 radial-three-quarters">
-                  <span class="radial-01-number">
-                    04<span style={{fontSize:'10px'}}>Days</span>
-                  </span>
-                  <span class="radial-01-border-r"></span>
-                  <span class="radial-01-border-l"></span>
-                </div>
+              <div class="radial-01 radial-three-quarters">
+                <span class="radial-01-number">
+                  04<span style={{ fontSize: '10px' }}>Days</span>
+                </span>
+                <span class="radial-01-border-r"></span>
+                <span class="radial-01-border-l"></span>
               </div>
+            </div>
           </div>
           <div className="BtnSecLeave">
-            <span>Apply Leave</span>
+            <span onClick={() => setLeaveSection(true)}>Apply Leave</span>
             <span>Pending Requests</span>
             <span>More Details</span>
           </div>

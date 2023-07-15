@@ -1,15 +1,17 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink ,useNavigate} from 'react-router-dom';
 import './Header.css';
 import logo from '../../assets/logo-colored.svg';
 
 function Header() {
+ const navigate=useNavigate();
+
   return (
     <div className="containerHeader">
       <nav>
         <div className="navbar">
           <div className="logo">
-            <img src={logo} alt="" />
+            <img style={{cursor:'pointer'}} onClick={()=>navigate('/home')} src={logo} alt="" />
           </div>
           <ul>
             <li>
