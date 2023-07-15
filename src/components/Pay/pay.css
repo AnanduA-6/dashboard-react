@@ -90,7 +90,8 @@
     flex-direction: column;
     padding: 3rem 0 5rem 0;
 }
-.payBodyPS h2{
+
+.payBodyPS h2 {
     font-weight: normal;
 }
 
@@ -111,7 +112,7 @@
     font-size: 0.8rem;
 }
 
-.viewSec{
+.viewSec {
     display: flex;
     column-gap: 5rem;
     align-items: center;
@@ -120,6 +121,7 @@
     font-size: 0.8rem;
     margin-top: 3rem;
 }
+
 .selectorSS div select {
     width: 15rem;
     outline: none;
@@ -130,9 +132,42 @@
     height: 2rem;
     border-radius: 2px;
 }
-.viewSec span{
+
+.viewSec span {
     cursor: pointer;
 }
-.viewSec span i{
+
+.viewSec span i {
     margin-right: 5px;
+}
+
+.topSec {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    row-gap: 0.5rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgb(85, 83, 83);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+.topSec div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+.topSec h2{
+    text-decoration: underline;
+    color: #2044a6;
+}
+.paySlipViewer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.paySlipViewer img{
+    width: 25rem;
 }
