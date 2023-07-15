@@ -25,3 +25,138 @@
     padding: 1rem 0;
     padding-top: 0;
 }
+
+.containerProfile.containerProfile img{
+    width: 2rem;
+    border-radius: 55%;
+}
+.profileHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding-top: 1rem;
+
+}
+.profileHeader span{
+    font-size: 0.7rem;
+}
+.profileHeader h3{
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 0.9rem !important;
+}
+.profileHeader .sec1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    border-right: 1px solid rgb(137, 135, 135);
+}
+.sec1 img{
+    width: 5rem !important;
+    height: 5rem;
+}
+
+.sec1 div{
+    line-height: 20px;
+
+}
+.profileHeader .sec1,.sec2,.sec3{
+    width: calc(100%/3);
+}
+.sec2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    row-gap: 1rem;
+    height: 100%;
+}
+.sec2 div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+.sec2 div span:nth-child(2){
+    background-color: rgb(23, 153, 23);
+    padding: 3px 5px ;
+    border-radius: 4px;
+    color: white;
+}
+.sec3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid rgb(137, 135, 135);
+    row-gap: 0.3rem;
+}
+.sec3 div{
+    display: flex;
+    align-items: center ;
+    justify-content:center;
+    width: 90%;
+    column-gap: 1rem;
+}
+
+.profileSelector{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1rem;
+    width: 90%;
+    border-radius: 2px;
+    background-color: #2044a6;
+    color: white;
+    margin-top: 2rem;
+}
+.profileSelector span{
+    padding: 1rem 0;
+    cursor: pointer;
+    width: calc(100%/3);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.addBackground{
+    background-color: rgb(209, 95, 60) !important;
+}
+
+.profileBodyPI{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    position: relative;
+}
+.profileBodyPI span{
+    font-size: 0.8rem;
+}
+.profileBodyPI div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+.workInfo{
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    align-items: start !important;
+    justify-content: start !important;
+    border-top: 1px solid rgb(127, 125, 125);
+}
+.workInfo h2{
+    font-size: 1rem;
+}
+.editBtn{
+    position: absolute;
+    top: 2rem;
+    right: 0;
+}
