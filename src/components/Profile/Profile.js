@@ -24,7 +24,7 @@ function Profile() {
                 <div className="containerProfile">
                     <div className="profileHeader">
                         <div className="sec1">
-                            <img src={user}></img>
+                            <img alt='' src={user}></img>
                             <div>
                                 <span>EmpId</span>
                                 <h3>Emily <br></br>Clark</h3>

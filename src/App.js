@@ -1,5 +1,3 @@
-
-import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Pay from "./components/Pay/Pay";

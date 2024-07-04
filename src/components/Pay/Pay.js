@@ -32,7 +32,7 @@ function Pay() {
 
         let month = document.querySelector('.selectMonth').value;
         let year = document.querySelector('.selectYear').value
-        if (month != 'null' && year != 'null') {
+        if (month !=='null' && year !== 'null') {
             setError('Unavailable')
         }
         if (year === '2023') {
