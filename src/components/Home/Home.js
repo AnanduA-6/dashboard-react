@@ -9,11 +9,7 @@ function Home() {
   const navigate = useNavigate()
   let token = sessionStorage.getItem('login')
   const [leaveSection, setLeaveSection] = useState(false)
-  useEffect(() => {
-    if (token == null) {
-      navigate('/')
-    }
-  }, [])
+  
   function logout() {
     sessionStorage.removeItem('login')
     navigate('/')
@@ -95,7 +91,7 @@ function Home() {
           <h1>Home</h1>
           <div className='headerRight'>
             <img src={user} alt="" />
-            <span>Ann Rachel</span>
+            <span>Emily Clark</span>
             <i class="fa-solid fa-power-off logoutBtn" title='Logout' onClick={() => logout()}></i>
           </div>
         </div>
@@ -127,7 +123,7 @@ function Home() {
                 <span className='viewAllBtn'>View All</span>
               </div>
               <div className="rightSec">
-                <div className='infoIcon'><i class="fa-solid fa-info"></i></div>
+                <div className='infoIcon' style={{cursor:'pointer'}}><i class="fa-solid fa-info"></i></div>
                 <div className='pointsSec'><span>1200</span><span>Points</span></div>
 
               </div>
@@ -153,7 +149,7 @@ function Home() {
 
 
             <div className='taxTab'>
-              <div><span>Tax Summary</span> <span className='faq'>Faq<i class="fa-solid fa-question"></i></span></div>
+              <div><span>Tax Summary</span> <span className='faq' style={{cursor:'pointer'}}>Faq<i class="fa-solid fa-question"></i></span></div>
               <div><span className='taxAmount'>₹53,832</span></div>
               <div className='taxBarMain'>
                 <div className='taxBar'>

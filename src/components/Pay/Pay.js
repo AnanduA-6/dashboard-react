@@ -6,11 +6,6 @@ import { useNavigate } from 'react-router-dom'
 function Pay() {
     const navigate = useNavigate()
     let token = sessionStorage.getItem('login')
-    useEffect(() => {
-        if (token == null) {
-            navigate('/')
-        }
-    }, [])
     const [state, setState] = useState('SS')
     const [view, setView] = useState(false)
     const [viewPaySlip, setViewPaySlip] = useState(false)

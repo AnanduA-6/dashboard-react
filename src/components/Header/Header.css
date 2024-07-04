@@ -25,7 +25,8 @@
 }
 
 .containerHeader .logo{
-  margin: 2rem 0 1rem 1rem;
+  margin: 2rem 0;
+  justify-content: center;
   padding-bottom: 2rem;
   display: flex;
   align-items: center;

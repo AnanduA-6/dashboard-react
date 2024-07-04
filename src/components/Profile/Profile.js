@@ -27,7 +27,7 @@ function Profile() {
                             <img src={user}></img>
                             <div>
                                 <span>EmpId</span>
-                                <h3>Ann <br></br>Rachel</h3>
+                                <h3>Emily <br></br>Clark</h3>
                                 <span>Employee</span>
                             </div>
                         </div>
@@ -59,17 +59,19 @@ function Profile() {
                         state === 'PI' ? <div className='profileBodyPI'>
                             <i title='edit' class="fa-solid fa-pen-to-square editBtn"></i>
                             <h3>Personal Information</h3>
-                            <div><span>Fist Name</span><span>Ann Rachel</span></div>
-                            <div><span>Fist Name</span><span>Ann Rachel</span></div>
-                            <div><span>Fist Name</span><span>Ann Rachel</span></div>
-                            <div><span>Fist Name</span><span>Ann Rachel</span></div>
-                            <div><span>Fist Name</span><span>Ann Rachel</span></div>
-                            <div><span>Fist Name</span><span>Ann Rachel</span></div>
-                            <div><span>Fist Name</span><span>Ann Rachel</span></div>
-                            <div><span>Fist Name</span><span>Ann Rachel</span></div>
-                            <div><span>Fist Name</span><span>Ann Rachel</span></div>
-                            <div><span>Fist Name</span><span>Ann Rachel</span></div>
-                            <div><span>Fist Name</span><span>Ann Rachel</span></div>
+    <div><span>First Name:</span><span>Emily</span></div>
+    <div><span>Last Name:</span><span>Clark</span></div>
+    <div><span>Email:</span><span>emily.clark@example.com</span></div>
+    <div><span>Phone:</span><span>(123) 456-7890</span></div>
+    <div><span>Address:</span><span>1234 Elm Street, Springfield, IL, 62704</span></div>
+    <div><span>Date of Birth:</span><span>January 1, 1990</span></div>
+    <div><span>Gender:</span><span>Female</span></div>
+    <div><span>Nationality:</span><span>American</span></div>
+    <div><span>Occupation:</span><span>Software Engineer</span></div>
+    <div><span>Company:</span><span>Tech Solutions Inc.</span></div>
+    <div><span>Marital Status:</span><span>Single</span></div>
+    <div><span>LinkedIn:</span><span><span>linkedin.com/in/emilyclark</span></span></div>
+    <div><span>Twitter:</span><span><span>@emilyclark</span></span></div>
                         </div> : ''
                     }
 
@@ -89,12 +91,12 @@ function Profile() {
                             <div className="workInfo">
                                 <h2>Work Information</h2>
                                 <div>
-                                    <span>ORG Unit</span>
-                                    <span>Hexaware{">"}Mavericks with Hexavarsity</span>
+                                    <span>Lorem Ipsum</span>
+                                    
                                 </div>
                                 <div>
-                                    <span>Work Site</span>
-                                    <span>Indian{">"}TamilNadu{">"}Chennai{">"}SIRUSREE S</span>
+                                    <span>Lorem Ipsum</span>
+                                   
                                 </div>
                             </div>
                         </div> : ''
